@@ -249,3 +249,39 @@
   python -m venv .venv
   .\.venv\Scripts\activate
   pip install -r requirements.txt
+  ```
+### Run the main agent:
+
+python agent.py
+
+
+### Run a baseline opponent in a second terminal:
+
+python sample_agent.py
+
+
+### In a third terminal, start the judge engine:
+
+setx PLAYER1_URL "http://localhost:5008"
+setx PLAYER2_URL "http://localhost:5009"
+python judge_engine.py
+
+
+### The judge will play repeated games between the two agents and print results to the console.
+
+### For quick engine tests:
+python test_engine.py
+
+
+### For batch tournaments:
+python batch_process.py
+
+### Future Work
+This agent is structured to support further improvements without rewriting the core engine.
+
+### Possible directions:
+Replace hand tuned heuristics with a learned evaluation function trained on self play data.
+Add Monte Carlo or rollout based evaluation for positions where the static heuristic is uncertain.
+Build a replay viewer that animates stored game logs and overlays search statistics.
+Add parameter sweeps and automated tuning of weighting parameters in the evaluation function.
+The current version already combines opening preparation, region based logic, and time aware search tuned for an 18 by 20 toroidal grid. Further work can push it into more advanced reinforcement learning or multi agent research territory.
