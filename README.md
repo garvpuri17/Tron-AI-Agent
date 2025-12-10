@@ -1,5 +1,5 @@
-**Tron AI Agent (TAMU Datathon 2025)
-**
+Tron AI Agent (TAMU Datathon 2025)
+
 A competitive autonomous Tron agent built to evaluate game state, predict opponent paths, and choose optimal movement using deep search and territory control logic. Designed for stable decision making under strict time constraints and adversarial board conditions.
 
 TLDR for Reviewers
